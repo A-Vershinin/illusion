@@ -1,0 +1,28 @@
+extends ../basic/_template.pug
+
+block content
+
+  .wrapper
+    //HEADER
+    include ../layout/_header
+    //END HEADER
+    |
+    |
+    //MAIN CONTENT
+
+    main.content
+      // works
+      include ../layout/_works
+      // end works  
+      //- |
+      //- |
+      
+    //END CONTENT
+    |
+    |
+    //MAIN FOOTER
+    include ../layout/_footer
+    //END FOOTER
+    |
+    |
+    include ../blocks/_btnTop

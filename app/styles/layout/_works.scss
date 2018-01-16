@@ -1,0 +1,136 @@
+.works {
+  background-color: #ffffff;
+}
+.works__container {
+  @extend %clearfix;
+}
+.works__block {
+  padding: 70px 0;
+  text-align: center;
+}
+.works__tump,
+.works__gallery {
+  @extend %ul-reset;
+  font-size: 0;
+}
+.works__tump {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.works__tump-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  &:last-child {
+    .works__tump-link {
+      border-right: 1px solid #bdc3c7;
+    }
+  }
+  &--active {
+    .works__tump-link {
+      color: #ffffff;
+      background-color: #41bedd;
+      border-color: #41bedd;
+    }
+  }
+}
+.works__tump-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  padding: 0 rem(28px);
+  font-size: rem(14px);
+  line-height: 35px;
+  font-family: $font-base;
+  font-weight: 400;
+  color: #34383d;
+  border-top: 1px solid #bdc3c7;
+  border-bottom: 1px solid #bdc3c7;
+  border-left: 1px solid #bdc3c7;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  &:hover {
+    color: #ffffff;
+    background-color: #41bedd;
+    border-color: #41bedd;
+  }
+  &:active {
+    color: #ffffff;
+    background-color: darken(#41bedd, 10%);
+    border-color: darken(#41bedd, 10%);
+  }
+}
+.works__gallery {
+  @extend %clearfix;
+}
+.works__gallery-item {
+  position: relative;
+  width: 33.33%;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.works__gallery-img {
+  width: 100%;
+}
+.works__btn {
+  padding: rem(6px) rem(21px);
+  font-size: rem(14px);
+  line-height: rem(21px);
+  font-family: $font-base;
+  font-weight: 400;
+  color: #34383d;
+  background-color: transparent;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  &:hover {
+    border-color: $accent;
+  }
+  &:active {
+    border-color: $accent-active;
+  }
+}
+@include laptop {
+  .works__gallery-item {
+    width: 50%;
+  }
+}
+@include tablets {
+  .works__block {
+    padding: 50px 0;
+  }
+  .works__tump-link {
+    padding: 0 rem(20px);
+  }
+}
+@include phones {
+  .works__block {
+    padding: 30px 0;
+  }
+  .works__tump {
+    display: block;
+  }
+  .works__tump-item {
+    display: block;
+    width: 50%;
+    float: left;
+  }
+  .works__tump-link {
+    display: block;
+    border-right: 1px solid #bdc3c7;
+  }
+  .works__gallery-item {
+    width: 100%;
+  }
+  .works__gallery-pict img {
+    max-height: 250px;
+  }
+}

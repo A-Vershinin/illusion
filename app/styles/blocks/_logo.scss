@@ -1,0 +1,22 @@
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 170px;
+  max-height: 100px;
+  overflow: hidden;
+  background-color: #7b28b1;
+  background-image: linear-gradient(to right, #7b28b1 0%,#35eef6 100%);
+}
+.logo__link {
+  display: block;
+  font-family: $font-base;
+  font-size: 38px;
+  line-height: 100px;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+  background-color: #ffffff;
+  mix-blend-mode: lighten;
+}
+

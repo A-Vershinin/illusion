@@ -1,0 +1,59 @@
+.breadcrums {
+  @extend %ul-reset;
+  font-size: 0;
+}
+.breadcrums__item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  &:last-child {
+    .breadcrums__link-icon {
+      display: none;
+    }
+  }
+}
+.breadcrums__link {
+  position: relative;
+  display: block;
+  padding: 4px 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.15s;
+  cursor: pointer;
+  &:hover {
+    color: $accent;
+    .breadcrums__link-icon {
+      fill: $accent;
+    }
+  }
+  &:active {
+    color: darken($accent, 10%);
+    .breadcrums__link-icon {
+      fill: darken($accent, 10%);
+    }
+  }
+}
+.breadcrums__link-icon {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  right: 0;
+  display: block;
+  height: 0;
+  line-height: 1;
+  font-size: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  fill: #ffffff;
+  transition: 0.15s;
+}
+@include tablets {
+  .breadcrums__link {
+
+  }
+}
+@include phones {
+  .breadcrums__link {
+    font-size: rem(14px);
+  }
+}

@@ -1,0 +1,101 @@
+nav.menu#main-menu
+  button(type="button" aria-label="menu" aria-controls="navigation").hamburger.menu__hamburger.hamburger--collapse
+      span.hamburger-box
+        span.hamburger-inner
+  // menu  
+  ul.menu__list
+    li.menu__item
+      a(href="#").menu__link
+        |Home
+        +icon("menu__link-icon", "arrow", "8")
+      // submenu level1    
+      ul.submenu.submenu--level1
+        li.submenu__item
+          a(href="#").submenu__link
+            | Sortable grid with text
+            +icon("submenu__link-icon", "arrow", "8")
+        li.submenu__item.submenu__item--active
+          a(href="#").submenu__link
+            | Sortable grid without text
+            +icon("submenu__link-icon", "arrow", "8")
+          // submenu level2    
+          ul.submenu.submenu--level2
+            li.submenu__item
+              a(href="#").submenu__link
+                | 2 columns
+            li.submenu__item.submenu__item--active
+              a(href="#").submenu__link
+                | 2 columns with right sidebar
+            li.submenu__item
+              a(href="#").submenu__link
+                | 3 columns
+          // end submenu level2        
+      // end submenu level1              
+    li.menu__item
+      a(href="#").menu__link
+        |Pages
+        +icon("menu__link-icon", "arrow", "8")
+    li.menu__item
+      a(href="#").menu__link
+        |Portfolio
+        +icon("menu__link-icon", "arrow", "8")
+      // submenu level1    
+      ul.submenu.submenu--level1
+          li.submenu__item
+            a(href="#").submenu__link
+              |Classic
+              +icon("submenu__link-icon", "arrow", "8")
+          li.submenu__item
+            a(href="#").submenu__link
+              |Sortable grid with text
+              +icon("submenu__link-icon", "arrow", "8")    
+          li.submenu__item.submenu__item--active
+            a(href="#").submenu__link
+              |Sortable grid without text
+              +icon("submenu__link-icon", "arrow", "8")
+            // submenu level2   
+            ul.submenu.submenu--level2
+              li.submenu__item
+                a(href="#").submenu__link
+                  |2 columns
+              li.submenu__item.submenu__item--active
+                a(href="#").submenu__link
+                  | 2 columns with right sidebar
+              li.submenu__item
+                a(href="#").submenu__link
+                  | 3 columns
+            // end submenu level2
+          li.submenu__item
+            a(href="#").submenu__link
+              |Sortable grid without text
+              +icon("submenu__link-icon", "arrow", "8")
+          li.submenu__item
+            a(href="#").submenu__link
+              | Sortable masonry
+              +icon("submenu__link-icon", "arrow", "8")
+          li.submenu__item
+            a(href="#").submenu__link
+              |Single project pages
+              +icon("submenu__link-icon", "arrow", "8")
+      // end submenu level1    
+    li.menu__item
+      a(href="#").menu__link
+        |Blog
+        +icon("menu__link-icon", "arrow", "8")
+    li.menu__item
+      a(href="#").menu__link
+        |Features
+        +icon("menu__link-icon", "arrow", "8")
+    li.menu__item
+      a(href="#").menu__link
+        |Shortcodes  
+        +icon("menu__link-icon", "arrow", "8")
+    // end menu  
+    // menu search 
+    .menu__search.search
+      .search__button
+        a(href="#", data-selector="#main-menu").search__toggle
+          i(aria-hidden="true").fa.fa-search.search__icon
+      form(action="").search__box
+        input(type="text", placeholder="Type here to search...").search__input
+    // end menu search

@@ -1,0 +1,27 @@
+
+/* Шрифты */
+/* font-family: "LatoRegular"; */
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/Lato/LatoRegular/lato-regular.woff") format("woff"),
+	url("../fonts/Lato/LatoRegular/lato-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+/* font-family: "LatoLight"; */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/LatoLight/lato-light.woff") format("woff"),
+  url("../fonts/Lato/LatoLight/lato-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+/* font-family: "Font Awesome"; */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"),
+  url("../fonts/FontAwesome/fontawesome-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+

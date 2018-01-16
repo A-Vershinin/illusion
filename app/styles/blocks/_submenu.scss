@@ -1,0 +1,102 @@
+.submenu {
+  @extend %ul-reset;
+  text-align: left;
+  position: absolute;
+  z-index: 9999;
+  width: 228px;
+  transition: visibility 0.2s linear;
+  &.submenu--level1 {
+    visibility: hidden;
+  }
+  &.submenu--level2 {
+    top: 0;
+    visibility: hidden;
+    left: 228px;
+  }
+}
+.submenu--level2 .submenu__link {
+  padding-right: 10px;
+}
+.submenu--level1 .submenu__item:hover .submenu--level2 {
+  visibility: visible;
+}
+.submenu--level1 .submenu__item:hover > .submenu__link {
+  color: $accent;
+}
+.submenu--level1 .submenu__item:hover > .submenu__link .submenu__link-icon {
+  fill: $accent;
+}
+.submenu--level2 .submenu__item:hover .submenu__link:hover {
+  color: $accent;
+}
+.submenu--level1 .submenu__item:hover > .submenu__link:hover .submenu__link-icon {
+  fill: $accent;
+}
+.submenu--level2 .submenu__item:hover .submenu__link:active {
+  font-weight: 700;
+  color: darken($accent, 20%);
+}
+.submenu__item {
+  position: relative;
+}
+.submenu__link {
+  position: relative;
+  display: block;
+  padding: 12px 0;
+  padding-left: 20px;
+  padding-right: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-base;
+  font-weight: 300;
+  color: #34383d;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-top: 1px solid #ecf0f1;
+  cursor: pointer;
+}
+.submenu__link-icon {
+  position: absolute;
+  z-index: 50;
+  right: 15px;
+  top: 50%;
+  display: block;
+  height: 0;
+  line-height: 1;
+  font-size: 0;
+  transform: rotate(-90deg) translateY(-50%);
+  fill: $gray-1;
+  transition: 0.2s;
+}
+@include laptop {
+  .submenu {
+    position: static;
+    width: 100%;
+    &.submenu--level1 {
+      visibility: visible;
+      display: none;
+    }
+    &.submenu--level2 {
+      visibility: visible;
+      top: auto;
+      left: auto;
+      display: none;
+    }
+  }
+  .submenu__link {
+    padding-left: 0;
+  }
+  .submenu--level1 .submenu__link {
+    padding-left: 25px;
+    background-color: #c1b9b9;
+    padding-right: 45px;
+  }
+  .submenu--level2 .submenu__link {
+    padding-left: 50px;
+    background-color: #a8c9dc;
+  }
+  .submenu--level1 .submenu__link-icon {
+    right: 30px;
+    transform: rotate(0deg);
+  }
+}

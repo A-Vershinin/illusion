@@ -1,0 +1,229 @@
+.footer {
+  position: relative;
+  color: #606366;
+  background-color: #ecf0f1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 40;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #7b28b1;
+    background-image: linear-gradient(to right, #7b28b1 0%,#35eef6 100%);
+  }
+}
+.footer__top {
+  padding-top: rem(35px);
+  padding-bottom: rem(28px);
+  border-bottom: 1px solid #899096;
+}
+.footer__bottom {
+  position: relative;
+  padding-top: rem(28px);
+  padding-bottom: rem(24px);
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#bdc3c7, 0.2);
+  }
+}
+.footer__container {
+  @extend %clearfix;
+}
+.footer__col.col4 {
+  @include col(4);
+  float: left;
+  margin-right: $gutter; //30
+}
+.footer__col.col5 {
+  @include col(5);
+  float: left;
+  margin-right: $gutter; //30
+}
+.footer__col.col3 {
+  @include col(3);
+  float: left;
+}
+.footer__copyright {
+  display: block;
+  font-size: rem(16px);
+  line-height: rem(18px);
+  font-family: $font-base;
+  font-weight: 300;
+  text-align: center;
+  color: #899096;
+}
+.footer__title {
+  margin-bottom: rem(5px);
+  font-size: rem(20px);
+  line-height: rem(55px);
+  font-family: $font-base;
+  font-weight: 300;
+  color: #34383d;
+}
+.footer__text {
+  font-size: rem(16px);
+  line-height: rem(24px);
+  font-family: $font-base;
+  font-weight: 300;
+  text-align: justify;
+  color: #606366;
+}
+.footer__info {
+  @extend %clearfix;
+}
+.footer__info-left {
+  width: 54%;
+  float: left;
+}
+.footer__info-right {
+  width: 46%;
+  float: left;
+}
+.footer__info-item {
+  display: block;
+  margin-bottom: rem(10px);
+  font-size: 0;
+  color: #606366;
+  text-decoration: none;
+  word-wrap: normal;
+  cursor: pointer;
+}
+.footer__info-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  color: #a255c4;
+  border: 1px solid #a255c4;
+  border-radius: 50%;
+  & .fa {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.footer__info-text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+.footer__info-btn {
+  padding: rem(6px) rem(16px);
+  font-size: rem(14px);
+  line-height: rem(21px);
+  font-weight: 400;
+  text-align: center;
+  color: #34383d;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  transition: all 0.15s;
+  &:hover {
+    color: #a255c4;
+    background-color: transparent;
+    border-color: #a255c4;
+  }
+  &:active {
+    color: #ffffff;
+    background-color: #a255c4;
+  }
+}
+.footer__socials {
+}
+@media screen and (max-width: 1024px) {
+  .footer__col.col3 {
+    @include col(5);
+  }
+  .footer__col.col5 {
+    @include col(3);
+  }
+  .footer__info-left,
+  .footer__info-right {
+    float: none;
+    width: 100%;
+  }
+}
+@include laptop {
+  .footer__top {
+    padding-top: rem(25px);
+    padding-bottom: rem(25px);
+  }
+  .footer__bottom {
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+  }
+  .footer {
+    .footer__col.col3 {
+      width: 100%;
+    }
+    .footer__col.col4 {
+      width: 45%;
+      margin-right: 10%;
+    }
+    .footer__col.col5 {
+      width: 45%;
+      margin-right: 0;
+    }
+  }
+  .footer__socials {
+    text-align: center;
+  }
+  .footer__col.col3 .footer__title {
+    text-align: center;
+  }
+}
+@include tablets {
+  .footer__top {
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+  }
+  .footer__bottom {
+    padding-top: rem(16px);
+    padding-bottom: rem(16px);
+  }
+  .footer__title {
+    font-size: rem(18px);
+    line-height: rem(40px);
+  }
+  .footer__text {
+    font-size: rem(14px);
+    line-height: rem(20px);
+  }
+}
+@include phones {
+  .footer {
+    .footer__col.col3,
+    .footer__col.col4,
+    .footer__col.col5 {
+      width: 100%;
+    }
+  }
+  .footer__col {
+    margin-bottom: 20px;
+  }
+  .footer__info .footer__info-left,
+  .footer__info .footer__info-right {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer__title {
+    text-align: center;
+  }
+  .footer__top {
+    padding-top: rem(16px);
+    padding-bottom: rem(16px);
+  }
+}
